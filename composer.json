@@ -1,0 +1,25 @@
+{
+    "name": "julio/estrutura-mvc",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^11.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/",
+            "config\\": "config/",
+            "src\\": "src/",
+            "routes\\": "routes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julio Cesar"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<?php
+
+namespace config;
+
+use config\ConfigBase;
+use PDO;
+
+class Config extends ConfigBase
+{
+    const BASE_URL = '';
+
+    const APP_NAME = 'estrutura';
+    const APP_ENV = 'local';
+    const APP_KEY = 'CIfwySWC7XpujtgM7DBgcEHwpNfb1+nbPHTxDuBNTPE=';
+    const APP_DEBUG = true;
+
+    const DB_DEFAULT = [
+        'driver' => 'mariadb',
+        'url' => '',
+        'host' => '127.0.0.1',
+        'port' => '3306',
+        'database' => 'laravel',
+        'username' => 'root',
+        'password' => '',
+        'unix_socket' => '',
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'prefix_indexes' => true,
+        'strict' => true,
+        'engine' => null,
+        'options' =>  [
+            PDO::MYSQL_ATTR_SSL_CA => 'MYSQL_ATTR_SSL_CA',
+        ],
+    ];
+
+    const MAILERS = [
+        'transport' => 'smtp',
+        'url' => '',
+        'host' => '127.0.0.1',
+        'port' => 2525,
+        'encryption' => 'tls',
+        'username' => '',
+        'password' => '',
+        'timeout' => null,
+    ];
+
+    const AWS_ACCESS_KEY_ID = '';
+    const AWS_SECRET_ACCESS_KEY = '';
+    const AWS_DEFAULT_REGION = '';
+    const AWS_BUCKET = '';
+    const AWS_USE_PATH_STYLE_ENDPOINT = false;
+}
