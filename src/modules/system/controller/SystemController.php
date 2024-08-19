@@ -15,6 +15,6 @@ class SystemController extends Controller
             'list' => $dao->getData()
         ];
 
-        $this->renderTemplate('system/views/system', $data);
+        $this->loadView('system/views/system', $data);
     }
 }

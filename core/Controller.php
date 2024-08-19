@@ -3,19 +3,11 @@
 namespace core;
 class Controller
 {
-    public function render($view, $data = [])
-    {
-        if (file_exists('../src/modules/' . $view . '.php')) {
-            extract($data);
-            require '../src/modules/' . $view . '.php';
-        } else {
-            echo "View {$view} não encontrada.";
-        }
-    }
+    protected $view;
 
-    public function renderTemplate($view, $data = [])
+    public function loadView($view, $data = [])
     {
-        extract($data);
-        require_once '../src/template/template.php';
+        $this->view = new View($view, $data);
+        $this->view->render();
     }
 }
