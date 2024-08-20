@@ -8,6 +8,6 @@ class Controller
     public function loadView($view, $data = [])
     {
         $this->view = new View($view, $data);
-        $this->view->render();
+        $this->view->renderTemplate();
     }
 }

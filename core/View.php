@@ -23,9 +23,9 @@ class View
         require_once $this->view;
     }
 
-    public function renderTemplate($view, $data = [])
+    public function renderTemplate()
     {
-        extract($data);
+        extract($this->data);
         require_once '../src/template/template.php';
     }
 }
