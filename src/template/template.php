@@ -10,7 +10,7 @@
 <body>
 
     <div class="container">
-        <?php $this->render($view, $data); ?>
+        <?php $this->render(); ?>
     </div>
 
     <script src="../../public/assets/lib/bootstrap/js/bootstrap.bundle.min.js" ></script>

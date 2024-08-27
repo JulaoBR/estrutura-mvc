@@ -2,6 +2,7 @@
 
 namespace core;
 
+use core\Middleware;
 class Router 
 {
     public $routes;
@@ -14,7 +15,7 @@ class Router
 
     public function run($routes)
     {
-        global $middleware;
+        $middleware = new Middleware();
 
         $method = Request::getMethod();
         $route = Request::getRoute();
@@ -43,11 +44,9 @@ class Router
 
         static::$entry_func = $entry_func;
 
-        $defined_controller->$entry_func();
-
-        // $middleware->runController(
-        //     $route, $security, $definedController, $entry_func, $method
-        // );
+        $middleware->runController(
+            $route, $security, $defined_controller, $entry_func, $method
+        );
     }
 
     public static function getSecurityRoutes() 
