@@ -4,7 +4,7 @@ namespace config;
 
 class ConfigBase
 {
-    const BASE_URL = 'public/estrutura-mvc';
+    const BASE_URL = 'public';
 
     const LOGS = [
         'path' => 'logs',

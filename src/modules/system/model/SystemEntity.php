@@ -1,6 +1,6 @@
 <?php
 
-namespace src\modules\system\models;
+namespace src\modules\system\model;
 
 use core\Entity;
 

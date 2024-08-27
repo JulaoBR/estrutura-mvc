@@ -3,7 +3,7 @@
 namespace src\modules\system\controller;
 
 use core\Controller;
-use src\modules\system\models\SystemDAO;
+use src\modules\system\model\SystemDAO;
 
 class SystemController extends Controller
 {
@@ -15,6 +15,6 @@ class SystemController extends Controller
             'list' => $dao->getData()
         ];
 
-        $this->loadView('system/views/system', $data);
+        $this->loadView('system/view/system', $data);
     }
 }
