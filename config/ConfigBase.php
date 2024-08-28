@@ -7,7 +7,7 @@ class ConfigBase
     const BASE_URL = '/estrutura-mvc/public';
 
     const LOGS = [
-        'path' => 'logs',
+        'path' => '/var/www/dev.com/estrutura-mvc/',
         'name_file' => 'estrutura_mvc'
     ];
 }

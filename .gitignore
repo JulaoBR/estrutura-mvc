@@ -1,6 +1,6 @@
 /config/Config.php
 /vendor/
-*.log
+/logs/
 
 /public/assets/lib/bootstrap/css/bootstrap.min.css
 /public/assets/lib/bootstrap/js/bootstrap.bundle.min.js

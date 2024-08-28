@@ -62,10 +62,13 @@ class SystemLog
 
     public static function write($type, $message, $caller = null, $backtrace = null)
     {
-        $curdir = getcwd();
         $sysobj = self::getInstance();
 
-        chdir($sysobj->destination);
+        $path_destination = rtrim($sysobj->destination, '/');
+
+        if (!file_exists($path_destination . '/logs')) {
+            mkdir($path_destination . '/logs', 0777, true);
+        }
 
         $date = date('Y-m-d H:i:s');
         $type_str = self::getTypeString($type);
@@ -88,8 +91,9 @@ class SystemLog
 
         $full_msg = $date . " " . $file . $type_str . " " . print_r($message, TRUE) . $bt_str;
 
-        error_log($full_msg . "\n", $sysobj->message_type, $sysobj->filename);
-        chdir($curdir);
+        $path = "$path_destination/logs/$sysobj->filename";
+
+        error_log($full_msg . "\n", $sysobj->message_type, $path);
     }
 }
 
