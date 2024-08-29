@@ -8,7 +8,9 @@ class LoginController extends Controller
 {
     public function login()
     {
-        sys_info($_GET);
+        $data = [];
+
+        $this->loadView('login/view/login', $data);
     }
 
 }

@@ -9,9 +9,7 @@
 </head>
 <body>
 
-    <div class="container">
-        <?php $this->render(); ?>
-    </div>
+    <?php $this->render(); ?>
 
     <script src="http://localhost/estrutura-mvc/public/assets/lib/bootstrap/js/bootstrap.bundle.min.js" ></script>
 </body>

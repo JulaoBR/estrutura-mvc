@@ -3,15 +3,20 @@
 namespace core\middleware;
 
 use core\Request;
+use core\Router;
 
 class AuthMiddleware extends Middleware
 {
-    public function _call($request, $next)
+    public function _call($object, $next)
     {
-        // if (!isset($_SESSION['user'])) {
-        //     Request::redirect('/login');
-        // }
+        if ($object->security == Router::WITHOUT_AUTH) {
+            return $next($object);
+        }
 
-        return $next($request);
+        if (!isset($_SESSION['user'])) {
+            Request::redirect('/login');
+        }
+
+        return $next($object);
     }
 }

@@ -7,6 +7,9 @@ class Router
 {
     public $routes;
 
+    const AUTH = "AUTENTICAR";
+    const WITHOUT_AUTH = "SEM_AUTENTICACAO";
+
     const ERROR_CONTROLLER = '';
     const DEFAULT_ACTION = '';
 
