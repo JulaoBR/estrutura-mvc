@@ -39,6 +39,9 @@ class Router
             $module     = $c[0];
             $controller = $c[1];
             $entry_func = $c[2];
+        } else {
+            sys_info('ROTA NAO ENCONTRADA');
+            return;
         }
 
         $controller = "\src\\modules\\$module\\controller\\$controller";

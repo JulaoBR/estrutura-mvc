@@ -11,6 +11,8 @@ class View
     {
         $this->data = $data;
 
+        $this->data['BASEDIR'] = Request::getBaseUrl();
+
         if (file_exists('../src/modules/' . $view . '.php')) {
             $this->view = '../src/modules/' . $view . '.php';
         } else {
@@ -20,6 +22,7 @@ class View
 
     public function render()
     {
+        extract($this->data);
         require_once $this->view;
     }
 

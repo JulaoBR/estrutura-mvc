@@ -12,15 +12,15 @@
                 <div class="d-flex justify-content-center align-items-center col-md-7">
                     <div class="p-4 p-md-5 flex-grow-1">
                         <h3>Login</h3>
-                        <form class="">
+                        <form class="" method="POST" action="<?= $settings['url_logar']; ?>">
                             <div class="mb-3">
                                 <label class="form-label">Login</label>
-                                <input placeholder="" name="email" type="email" class="form-control" value="">
+                                <input placeholder="" name="login" type="text" class="form-control" value="">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Password</label>
-                                <input placeholder="" name="password" type="password" class="form-control" value="">
+                                <input placeholder="" name="senha" type="password" class="form-control" value="">
                             </div>
 
                             <div class="justify-content-between align-items-center row">
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" disabled="" color="primary" class="mt-3 w-100 btn btn-primary">
+                                <button type="submit" color="primary" class="mt-3 w-100 btn btn-primary">
                                     Log in
                                 </button>
                             </div>

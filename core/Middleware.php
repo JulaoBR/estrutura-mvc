@@ -4,6 +4,7 @@ namespace core;
 
 use core\middleware\AuthMiddleware;
 use core\middleware\CsrfMiddleware;
+use core\middleware\SanitizeMiddleware;
 use InvalidArgumentException;
 use stdClass;
 use Closure;
@@ -15,6 +16,7 @@ class Middleware {
     public function __construct(array $layers = [])
     {
         $this->layers = [
+            new SanitizeMiddleware(),
             new AuthMiddleware(),
             new CsrfMiddleware()
         ];
