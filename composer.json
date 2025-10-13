@@ -2,6 +2,7 @@
     "name": "julio/estrutura-mvc",
     "type": "project",
     "require": {
+        "php": ">=8.0",
         "twbs/bootstrap": "^5.3"
     },
     "require-dev": {
